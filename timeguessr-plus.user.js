@@ -95,8 +95,8 @@
 
         const numbers = ["one", "two", "three", "four", "five"];
         const getTimeItem = (i) => `plus.${isDaily ? "daily" : ""}${i}.time`;
-        const getYearScoreItem = (i) => `${numbers[i]}Geo`;
-        const getGeoScoreItem = (i) => `${numbers[i]}Time`;
+        const getYearScoreItem = (i) => `${numbers[i]}Time`;
+        const getGeoScoreItem = (i) => `${numbers[i]}Geo`;
         const store = isDaily ? localStorage : sessionStorage;
 
         if (path.includes("one")) {
