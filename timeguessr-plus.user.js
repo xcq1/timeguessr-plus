@@ -2,7 +2,7 @@
 // @name         TimeGuessr+
 // @version      2024-06-10
 // @description  Improved TimeGuessr with Sharable Timing and Daily Breakdowns
-// @downloadURL  https://github.com/xcq1/timeguessr-plus/raw/main/timeguessr-plus.js
+// @downloadURL  https://github.com/xcq1/timeguessr-plus/raw/main/timeguessr-plus.user.js
 // @author       xcq1
 // @match        https://timeguessr.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=timeguessr.com
