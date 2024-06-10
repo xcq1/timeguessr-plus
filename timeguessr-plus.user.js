@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TimeGuessr+
-// @version      2024-06-10
+// @version      2024-06-10.2
 // @description  Improved TimeGuessr with Sharable Timing and Daily Breakdowns
 // @downloadURL  https://github.com/xcq1/timeguessr-plus/raw/main/timeguessr-plus.user.js
 // @author       xcq1
@@ -24,6 +24,7 @@
         border: 1px solid var(--accent);
         border-radius: 1em;
         text-align: center;
+        z-index: 11;
     }
     #plusButton.results {
         top: 0;
@@ -52,6 +53,7 @@
         flex: 1;
         overflow: hidden;
         object-fit: contain;
+        z-index: 11;
     }
     #plusPopupClose {
         display: inline;
