@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TimeGuessr+
-// @version      2024-06-09
+// @version      2024-06-10
 // @description  Improved TimeGuessr with Sharable Timing and Daily Breakdowns
 // @downloadURL  https://github.com/xcq1/timeguessr-plus/raw/main/timeguessr-plus.js
 // @author       xcq1
@@ -174,7 +174,7 @@
                 for (let i = 0; i < 5; i++) {
                     const iGeo = Number(store.getItem(getGeoScoreItem(i)));
                     const iYear = Number(store.getItem(getYearScoreItem(i)));
-                    const iTime = store.getItem(getTimeItem(i));
+                    const iTime = store.getItem(getTimeItem(i + 1));
                     score += iGeo + iYear;
                     iRows.push(`🌎 ${iGeo.toLocaleString("en-US")} 📅 ${iYear.toLocaleString("en-US")} 🕒 ${formatSeconds(iTime)}\n`);
                 }
