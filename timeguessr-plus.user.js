@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TimeGuessr+
-// @version      2024-06-16
+// @version      2024-06-23
 // @description  Improved TimeGuessr with Sharable Timing and Daily Breakdowns
 // @downloadURL  https://github.com/xcq1/timeguessr-plus/raw/main/timeguessr-plus.user.js
 // @author       xcq1
@@ -117,7 +117,7 @@
             recordTime = 5;
         } else if (path.includes("results")) {
             for (let i = 5; i >= 1; i--) {
-                if (store.getItem(getTimeItem(i))) {
+                if (store.getItem(getYearScoreItem(i))) {
                     showTime = i;
                     break;
                 }
