@@ -49,6 +49,7 @@
         display: flex;
         flex-direction: column;
         z-index: 11;
+        pointer-events: none;
     }
     #plusPopup img {
         flex: 1;
@@ -218,8 +219,10 @@
                             + `<p> ${dailyItem.Description} (${dailyItem.License})</p>`
                             + `<img src="${dailyItem.URL}"/>`;
 
+                        breakdownPopup.style.pointerEvents = "auto";
                         breakdownPopup.style.opacity = "1";
                         document.querySelector("#plusPopupClose").onclick = () => {
+                                breakdownPopup.style.pointerEvents = "none";
                                 breakdownPopup.style.opacity = "0";
                         };
 
