@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TimeGuessr+
-// @version      2024-06-24
+// @version      2025-06-10
 // @description  Improved TimeGuessr with Sharable Timing and Daily Breakdowns
 // @downloadURL  https://github.com/xcq1/timeguessr-plus/raw/main/timeguessr-plus.user.js
 // @author       xcq1
@@ -68,20 +68,20 @@
         plusButton.id = "plusButton";
         plusButton.textContent = "+";
 
-        const navbar = document.querySelector(".navbar");
-        if (navbar) {
+        const photoContainer = document.querySelector("#photoContainer");
+        const resultsWrap = document.querySelector(".results-wrap");
+
+        if (photoContainer) {
+            const navbar = document.querySelector(".navbar");
             document.body.insertBefore(plusButton, navbar);
+        } else if (resultsWrap) {
+            document.body.insertBefore(plusButton, resultsWrap)
         } else {
-            const resultsWrap = document.querySelector(".results-wrap");
-            if (resultsWrap) {
-                document.body.insertBefore(plusButton, resultsWrap)
+            const resultsContainer = document.querySelector("#resultsContainer");
+            if (resultsContainer) {
+                document.body.insertBefore(plusButton, resultsContainer)
             } else {
-                const resultsContainer = document.querySelector("#resultsContainer");
-                if (resultsContainer) {
-                    document.body.insertBefore(plusButton, resultsContainer)
-                } else {
-                    document.body.insertBefore(plusButton, document.body.firstChild);
-                }
+                document.body.insertBefore(plusButton, document.body.firstChild);
             }
         }
 
